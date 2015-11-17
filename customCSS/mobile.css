@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* Mobile Styles screen below 600px */
+
+@media only screen and ( max-width: 600px ) {
+	
+	/*===== reset split elemments =====*/
+	
+	.l-half, .l-seventy, .l-sixty, .l-fourty, .l-thirty, .l-twenty, .l-third, .l-quarter {width:100%;}
+	
+	/*.et_pb_row, .container, .et_pb_container {width:90%;}*/
+	
+	.mobileHide{display:none;}
+	.mobileShow{display:block;}
+	
+	#map_canvas .bureauName {
+	min-width:0;
+}
+	.countrySelectDiv {padding:0;}
+	.swMain ul.anchor li a.selected {
+		height: 55px;
+		width: 100%;
+	}
+	
+	a.reverseButton {width:80%;}
+	
+	.contactDialog {margin:3%; top:0!important;}
+	
+	/* FOOTER SECTION */
+	
+	#footer-bottom ul {display:none;}
+	#et-footer-nav li {display:block; text-align:left;}
+	.terms-nav li::after {content:"";}
+	#et-footer-nav ul {padding-bottom:20px;}
+	
+	.bannerText {font-size:0.6em; text-align:center;}
+	p.bannerText {padding-top:6%;}
+	.homeDelivery h1:before {
+	vertical-align: -200%;
+	}	
+	
+	#expmonth, #expyear {width:45%;}
+	
+	#basketTableContainer {min-height:0;}
+	#orderForm fieldset input, #orderForm fieldset select {
+		width:auto;
+	}
+	#main-content .bannerText{font-size:1.3em; text-align:left;}
+	.homeDelivery h1::before, .clicksell h1::before, .clickcollect h1::before {display:block; text-align:left;}
+	#orderForm fieldset, {}
+	.p_description_van {
+    background-image: url("../images/grey-van.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: 0;
+    padding-top: 40px;
+	}
+	.swMain .stepContainer .StepTitle {font-size:1.2em;}
+	.swMain ul.anchor li a .stepDesc {font-size:18px; height:50px;}
+	/*.ratesBox {display:block; text-align:center;} */
+	
+	input.addCurrencyButton {padding:15px 10%;}
+	.securePayment h2.StepTitle {width:50%; float:left;}
+	.securePayment img {float:right; width:40%;}
+	
+	.personalDetailsSection input[type="text"], .personalDetailsSection input[type="email"], .personalDetailsSection select,  #deliveryAddress input[type="text"], #paymentDetails input[type="text"]{width:100%;}
+	#deliveryAddress input[type="button"] {width:auto; margin:2% auto; padding:2%; display:block;}
+	 #deliveryAddress {width:100%;}
+	#step-2 .personalDetailsSection label, #step-2 #deliveryAddress label, #paymentDetails label {width:100%; display:block;}
+	.authiPayLogoSection{ position:relative; top:0; right:0;}
+	.authipayLogo{width:100%; display:block;}
+	.authipayLogo img{margin-left:25%;}
+	
+	#mobileDiv{width:100%;}
+	#step-2 .personalDetailsSection input#mobileNumber {
+		width: 60%;
+	}
+	.securitySection {width:100%;}
+	#deliveryAddress label.tickboxLabel{width:70%!important; display:inline-block!important;}
+	.tickboxLabel{display:inline-block!important;}
+	input[type=checkbox]{
+	  /* Double-sized Checkboxes */
+	  -ms-transform: scale(2); /* IE */
+	  -moz-transform: scale(2); /* FF */
+	  -webkit-transform: scale(2); /* Safari and Chrome */
+	  -o-transform: scale(2); /* Opera */
+	  margin-right:10px;
+	  width:auto;
+	}
+	.loaderMessage{
+		font-size:1em;
+	}
+	.loaderMessage img{ 
+		display:block;
+	   	margin: 5% auto;
+	}
+	
+	.et-social-icons {display:none;} 
+	
+	/* Bureau Opportunities */
+	img.paddedImage{padding:20px 0; width:100%;}
+	
+	.wideTopBanner {height:auto;}
+	.wideTopBanner .container {width:100%;}
+	.wideTopBanner .bannerText {font-size:1em; margin:auto; padding:5%;}
+	.blueContactForm{margin-bottom:20px;}
+	
+	/* Latest News */
+	.et_pb_post h2 {margin-bottom:5px;}
+	#left-area .post-meta{font-size:0.8em;}
+	
+	/* Store Locator*/
+	#bureauFilter{position:relative;}
+	#noStoresFoundMsg {margin:0;}
+	#bureauSearch {height:auto;}
+	#bureauList li {width:100%; min-height:0;}
+	#noStoresFoundMsg, #storesFoundMsg {margin-left:0;}
+	
+	/* Rates Board */
+	#exchangeRatesBoard .rate, #exchangeRatesBoard .curDesc, #exchangeRatesBoard .flag {display:block; text-align:left; padding-left:3%; width:100%;}
+	#exchangeRatesBoard .header .rate, #exchangeRatesBoard .header .flag{display:none;}
+	#exchangeRatesBoard a.redButton {display:block; width:90%; margin:0;}
+	
+	/* Home page */
+	.homeRatesSection {width:100%; margin:20px 0;}
+	#compareTheMarket ul li {width:50%; margin-top:30px;}
+	
+	.greatrates{display:none;}
+	#ratesBoard {padding:none;}
+	#ratesBoard ul li {padding:0; width:100%;clear:both;}
+	#ratesBoard .cur {width:25%; white-space:nowrap; overflow:hidden; float:left;}
+	#ratesBoard .curDesc{white-space:nowrap; overflow:hidden; }
+	#ratesBoard .flag {width:22%;float:left;}
+	#ratesBoard .rate {width:25%;float:left;}
+	.travelMoneyBox {padding:5% 0;}
+	img.homeboxImg {padding:0;}
+	#ratesBoard ul.header li span {width:20%;}
+	
+	/* Wizards */
+	#orderForm select {width:auto;}
+	.upsellImages {max-width:100%; margin:5px 0}
+	.stepContainer fieldset {display:block; clear:both;width:100%;}
+	.p_description{margin:20px 0;}
+	/*.stepContainer #orderForm fieldset input, .stepContainer #orderForm fieldset select {width:95%;}*/
+	.stepContainer input[type="text"], .stepContainer input[type="tel"], .stepContainer input[type="email"], .stepContainer input.text, .stepContainer input.title, .stepContainer textarea, .stepContainer select, #orderForm fieldset select {width:90%; padding:3%; margin-bottom:10px;}
+	
+	#step-1 .tandcLink {display:none;}
+
+	.greyboxLabel{width:100%;}
+	.blueSelectBox .blueBoxFlag {width:40px;}
+	.deliverymethod {width:100%;}
+	.greyboxContent input, #orderSuccessDiv .greyboxLabel{width:100%;}
+	#orderSummaryTable .headerband {
+    color: #d8212b;
+    overflow:hidden;
+    white-space: nowrap;
+	}
+	
+	th.crop{
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    white-space: nowrap!important;
+    max-width:130px;
+	}
+		
+}	
+
+
+
+/* ===================================== */ 
+/* ===== VERY SMALL SCREENS IPHONE  =====*/
+/* ===================================== */ 
+
+@media only screen and ( max-width: 443px ) {
+	
+	#ratesBoard .curDesc {display:none!important;}
+	#ratesBoard .flag, #ratesBoard .rate, #ratesBoard ul.header li span {width:32%;}
+	
+	#page-container {padding-top:85px;}
+	#main-header{height:80px;}
+	.et_fixed_nav #logo {
+	max-width:30%;
+	}
+	
+	.storeLocatorBox img.pull-left{float:none; margin:auto 20%;}
+	.storeLocatorBox .redHeader {padding-left:0;}
+	
+	#step-2 .personalDetailsSection input#mobileNumber {
+	    margin-top: 2%;
+	    width: 90%;
+	}
+	
+	.tickboxitem label {
+		width:60%!important;
+	}
+	
+	.blueSelectBox .blueBoxFlag {width:50px;}
+	.blueSelectBox .orderLine {display:block; width:100%; padding-top:2%;}
+	.blueSelectBox .orderLine input {width:50%;}
+	
+	.authipayLogo img {
+    	margin-left: auto;
+	}
+
+	.topBanner .bannerText {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	
+	input#homeDeliveryDate, input#DOB {width:60%; margin-bottom:0; margin-right:5px;}
+	#orderSummaryTable img {display:block;}
+	#orderSummaryTable td, #orderSummaryTable td.pull-right {vertical-align:bottom;}
+	
+.entry-content #orderSummaryTable tr.headerband th  {
+    color: #d8212b;
+    font-size: 0.9em;
+    font-weight: normal;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* Tablets and smaller screen layouts */
+
+
+@media only screen and ( max-width: 1100px ) {
+	.et_fixed_nav #logo {
+	    max-height: 60px;
+	}
+}
+
+
+@media only screen and ( max-width: 980px ){
+	.telNumber{float:none;
+	width:auto;
+	}	
+	.rate{
+	width:19%;	
+	}
+	.cur {display:none;}
+	.greatrates {display:none;}
+	#currenciesSummary td {white-space:normal;}
+}
+
+@media only screen and ( max-width: 767px ) {
+.et_fixed_nav #logo {max-width:50%; }
+.telNumber {font-size:1em; widht:30%;}
+/* // Change to 3 footer widgets */
+.footer-widget:nth-child(1) { width: 100%; padding-right:15px;}
+.footer-widget:nth-child(2) { width: 100%; padding-right:15px;}
+.footer-widget:nth-child(3) { width: 100%; margin-right:0;}
+
+.topBanner{height:60px; background-size:cover; background-position:50% 50%; text-align:center;}
+.bannerText {font-size:0.9em; text-align:center;}
+.homeDelivery h1:before {
+	content: url('../images/delivery-truck-80.jpg');
+	vertical-align: -150%;
+	}
+.stepContainer{height:auto!important;}
+#left-area ul, .entry-content ul, .comment-content ul {padding:0;   margin-bottom: 0;}
+.et_pb_row, .container, .et_pb_containe {width:80%;}	
+.swMain ul.anchor, .swMain ul.anchor li, ul.fakeTabs, ul.fakeTabs li {width:100%;}
+.swMain ul.anchor li a.selected, ul.fakeTabs li a.selected {width:100%;}
+.swMain ul.anchor li a.disabled , .swMain ul.anchor li a.done {width:100%; height:0; visibility:hidden;}
+.swMain ul.anchor li a.selected {width:100%;}
+ul.fakeTabs li a.disabled , ul.fakeTabs li a.done, fakeDivGrey {width:100%; height:0; visibility:hidden;}
+#basketCurrencies {width:100%;
+float:none;}
+.swMain .stepContainer div.content {position:relative; width:100%;}
+.swMain div.actionBar {width:100%;}
+#main-content .bannerText{font-size:1.3em; text-align:left;}
+.homeDelivery h1::before {
+    vertical-align: -100%;
+}
+.l-half {width:88%;}
+.fakeDivGrey {visibility:hidden; display:none; width:0; height:0;}
+.tickboxitem {padding-left:0; width:80%;}
+.input.tickbox {width:10%;}
+.authiPayLogoSection {right:-100px;}
+.securitySection {}
+}
+
+

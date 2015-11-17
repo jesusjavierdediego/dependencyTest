@@ -1,0 +1,340 @@
+/*   
+  SmartWizard 2.0 plugin 
+  jQuery Wizard control Plugin
+  by Dipu
+  
+  http://www.techlaboratory.net
+  http://tech-laboratory.blogspot.com
+*/
+.swMain {
+  position:relative;
+  display:block;
+  margin:0;
+  padding:0;
+  border: 0px solid #CCC;
+  overflow:visible;
+  float:left;
+  width:100%;/*735px*/
+}
+.swMain .stepContainer {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding:0;    
+  border: 0px solid #CCC;    
+  overflow:visible;
+  clear:both;
+  margin-bottom:2px;
+}
+
+.swMain .stepContainer div.content {
+  display:block;
+  position: absolute;  
+  float:left;
+  margin: 0;
+  padding:5px;     
+  color:#5A5655;   
+  background-color:#FFFFFF;  
+/*  height:560px;*/
+margin-bottom:1px;
+  text-align:left;
+  overflow:visible;    
+  z-index:88; 
+  border-radius:5px;
+  -webkit-border-radius: 5px;
+  border-radius  : 5px;
+  width:70%; /*722px;*/
+  clear:both;
+}
+
+.swMain div.actionBar {
+  display:block;
+  position: relative; 
+  clear:both;
+  margin:             3px 0 0 0;   
+  padding:            0;    
+  color:              #5A5655;   
+  height:35px;
+  text-align:left;  
+  z-index:88; 
+	padding:5px 0;
+  left:0;
+  width:70%;
+  margin-top:20px;
+}
+
+.swMain .stepContainer .StepTitle {
+  display:block;
+  position: relative;
+  margin:0;   
+  padding:5px;   
+  color:#d8212b;   
+  clear:both;
+  text-align:left; 
+  z-index:88;
+  font-size:1.6em;   
+}
+.swMain ul.anchor {
+  position: relative;
+  display:block;
+  float:left;
+  list-style: none;
+  padding: 0px;  
+  margin: 10px 0;      
+  clear: both;
+  border: 0px solid #CCCCCC;    
+  background: transparent; /*#EEEEEE */
+  width:100%;
+}
+.swMain ul.anchor li{ 
+  position: relative; 
+  display:block;
+  margin: 0;
+  padding: 0; 
+  border: none;      
+  float: left;
+  width:33%;
+}
+/* Anchor Element Style */
+.swMain ul.anchor li a {
+  display:block;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:3px;
+  height:80px;
+  width:100%;
+  text-decoration: none;
+  outline-style:none;
+  z-index:99;
+}
+.swMain ul.anchor li a .stepNumber{
+  	background-color: #f6f8f7;
+    border: 2px solid #f6f8f7;
+    border-radius: 25px;
+    color: #e6e6e6 ;
+    display: block;
+    font-size: 1.5em;
+    height: 30px;
+    margin: -20px auto 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.swMain ul.anchor li a.selected .stepNumber, .swMain ul.anchor li a.done .stepNumber{
+  	background-color: #fff;
+    border: 4px solid #d8212b;
+    color: #d8212b;
+}
+
+.swMain ul.anchor li a .stepDesc{
+  position:relative;
+  display:block;
+  padding:5px;
+  text-transform:uppercase;
+  font-size:1.4em;
+}
+
+.swMain ul.anchor li a.selected .stepDesc {
+	color:#ffffff;
+}
+
+.swMain ul.anchor li a .stepDesc small{
+  
+}
+.swMain ul.anchor li a.selected{
+  color:#FFFFFF;
+  background: #d8212b; 
+}
+.swMain ul.anchor li a.selected:hover {
+  color:#FFFFFF;  
+  background: #d8212b;  
+  cursor:default;
+}
+
+.swMain ul.anchor li a.done { 
+  position:relative;
+  color:#FFF;  
+  background: #d8212b;  
+  border: 0;   
+  z-index:99;
+  cursor:text;
+}
+.swMain ul.anchor li a.done:hover {
+	cursor:default; 
+}
+.swMain ul.anchor li a.disabled {
+  color:#CCCCCC;  
+  background: #F8F8F8; 
+  cursor:text;   
+}
+.swMain ul.anchor li a.disabled:hover {
+  color:#CCCCCC;  
+  background: #F8F8F8;     
+}
+
+.swMain ul.anchor li a.error {
+  color:#6c6c6c !important;  
+  background: #f08f75 !important;
+  border: 1px solid #fb3500 !important;      
+}
+.swMain ul.anchor li a.error:hover {
+  color:#000 !important;       
+}
+
+.swMain .buttonNext {
+  display:block;
+  float:right;
+  margin:5px 3px 0 3px;
+  padding:5px;
+  text-decoration: none;
+  text-align: center;
+  text-transform:uppercase;
+  width:100px;
+  color:#FFF;
+  outline-style:none;
+  background-color:#d8212b ;   
+}
+
+.swMain .buttonNext:hover. .swMain .buttonPrevious:hover, .swMain .buttonFinish:hover{
+	text-decoration:none;
+	background-color:#c0131c;
+	transition: background-color 0.4s;}
+
+.swMain .buttonDisabled {
+  color:#F8F8F8  !important;
+  background-color: #CCCCCC !important;
+  border: 1px solid #CCCCCC  !important;
+  cursor:text;    
+}
+.swMain .buttonPrevious {
+  display:block;
+  float:right;
+  margin:5px 3px 0 3px;
+  padding:5px;
+  text-decoration: none;
+  text-transform:uppercase;
+  text-align: center;
+  width:100px;
+  color:#FFF;
+  outline-style:none;
+  background-color:#d8212b; 
+}
+.swMain .buttonFinish {
+  display:block;
+  float:right;
+  margin:5px 3px 0 3px;
+  padding:5px;
+  text-decoration: none;
+  text-align: center;
+  text-transform:uppercase;
+  width:100px;
+  color:#FFF;
+  outline-style:none;
+  background-color:#d8212b ;     
+}
+
+/* Form Styles */
+
+.txtBox {
+  border:1px solid #CCCCCC;
+  color:#5A5655;
+font-size:13px;
+  padding:2px;
+  width:430px;
+}
+.txtBox:focus {
+  border:1px solid #EA8511;
+}
+
+.swMain .loader {
+  position:relative;  
+  display:none;
+  float:left;  
+  margin: 2px 0 0 2px;
+  padding:8px 10px 8px 40px;
+  border: 1px solid #FFD700; 
+  font: bold 13px ; 
+  color:#5A5655;       
+  background: #FFF url(../images/loader.gif) no-repeat 5px;  
+  border-radius  : 5px;
+  -webkit-border-radius: 5px;
+  z-index:998;
+}
+.swMain .msgBox {
+  position:relative;  
+  display:none;
+  float:left;
+  margin: 4px 0 0 5px;
+  padding:5px;
+  border: 1px solid #FFD700; 
+  background-color: #FFFFDD;  
+  font: normal 12px ; 
+  color:#5A5655;         
+  border-radius  : 5px;
+  -webkit-border-radius: 5px;
+  z-index:999;
+  min-width:200px;  
+}
+.swMain .msgBox .content {
+  font: normal 12px ;
+  padding: 0px;
+  float:left;
+}
+.swMain .msgBox .close {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  color: #CCC;
+  display: block;
+  float: right;
+  margin: 0 0 0 5px;
+  outline-style: none;
+  padding: 0 2px 0 2px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+.swMain .msgBox .close:hover{
+  color: #EA8511;
+  border: 1px solid #EA8511;  
+}
+
+/* Add styles for Mobile screen size */
+
+
+@media screen and (max-width:480px){
+	
+	.swMain div.actionBar{width:102%;}
+	.swMain ul.anchor li a{
+		width:100%; 
+		height:auto;
+	}
+	fieldset input{width:92%;}
+	
+	.summaryInfo{width:100%!important; display:block!important;}
+	.summaryLabel{width:100%!important; display:block!important; margin-top:10px;}
+	
+	.swMain ul.anchor li {
+    	padding: 1%;
+    	width: 98%;
+	}
+	.swMain ul.anchor li a .stepNumber{
+		font-size:18px
+	}
+	.swMain ul.anchor li a .stepDesc{font-size:14px;}
+	.swMain ul.anchor li a .stepDesc small{display:none;}
+	
+	#orderForm fieldset{width:100%;
+	clear:both;}
+	#orderForm fieldset input, #orderForm fieldset select{width:98%; margin-bottom:2%;}
+	
+	 .l-inlineLabel {width:100%!important;}
+	 
+	 #bureausTable {
+		padding-top: 10px;
+	}
+	table.styledTable td{width:auto;}
+	
+}

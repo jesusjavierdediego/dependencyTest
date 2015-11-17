@@ -3,7 +3,7 @@ define(['FXM', "totem"], function(FXM, Totem) {
 		rates: undefined,
 		ratesUrl: FXM.EndpointUrls.getRefinedRateBoard(),
 		rateTemplate: $("script#travelMoneyRateTemplate").html(),
-		
+
 		loadRates: function(rates) {
 			this.rates = rates;
 			if (this.rates) {
@@ -16,33 +16,50 @@ define(['FXM', "totem"], function(FXM, Totem) {
 				me.populateRateBoard();
 			});
 		},
-		
+
 		populateRateBoard: function() {
 			var me = this;
 			var fixedItems = [];
 			var scrollItems = [];
 			$.each(me.rates, function(key, value) {
 				if (value.rank == 'HIGH') {
-					fixedItems.push(_.template(me.rateTemplate, value));
+					fixedItems.push(_.template(me.rateTemplate, {
+                        'description': value.description,
+						'conversionAmount': value.conversionAmount,
+                        'isoAlphaCode': value.isoAlphaCode,
+                        'flag': value.isoAlphaCode.toLowerCase(),
+                        'baseIsoAlphaCode': value.baseIsoAlphaCode,
+                        'sellNote': value.sellNote,
+						'buyNote': value.buyNote
+                 }));
 				} else {
-					scrollItems.push(_.template(me.rateTemplate, value));
+					scrollItems.push(_.template(me.rateTemplate, {
+                        'description': value.description,
+						'conversionAmount': value.conversionAmount,
+                        'isoAlphaCode': value.isoAlphaCode,
+                        'flag': value.isoAlphaCode.toLowerCase(),
+                        'baseIsoAlphaCode': value.baseIsoAlphaCode,
+                        'sellNote': value.sellNote,
+						'buyNote': value.buyNote
+
+						}));
 				}
 			});
-			
+
 			$('<ul/>', {
 			    html: fixedItems.join('')
 			}).appendTo('#ratesBoard');
-			
+
 			$('<ul/>', {
 			    id: 'vertical-ticker',
 			    html: scrollItems.join(''),
 				style: 'overflow:hidden;'
 			}).appendTo('#ratesBoard');
-				
+
 			$('#vertical-ticker').totemticker({
 				row_height : '100px',
 				mousestop : true,
-			}); 
+			});
 		}
 	};
 	return rateboardGenerator;
